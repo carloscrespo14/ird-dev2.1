@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <div class="menu">
+    <button type="button" class="btn btn-light" (click)="toggle()">
+      <i class="fas fa-bars"></i> 
+    </button>
+  </div>
+
+  <div class="logo">
+    <a href="">
+      <img src="../assets/img/rdilogo_blanco.png" alt="logo-rdi-agencia-blanco">
+    </a>
+  </div>  
+  <div class="buscador">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2 Default input" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <!-- <input class="form-control Default input" type="text" placeholder="{{message.search}}"> -->
+  </div>
+  <div class="acciones">
+      <div class=""><a href=""><i class="fas fa-cog"></i></a> </div>
+      <div class=""><a href=""><i class="fas fa-user"></i></a> </div>
+  </div>
+</nav>
+<div class="dashboard">
+  
+  <div class="sidemenu" [@translate]="stateName">
+    <div class="subnav">
+      .menuchu
+    </div>
+      <div class="menu__container">
+          <button type="button" class="btn btn-secondary" routerLink="/listview" routerLinkActive="active">
+            <i class="fas fa-clipboard-list"></i> <span>Listar Casos</span> 
+          </button>
+          <button type="button" class="btn btn-secondary" routerLink="/addnewcase" routerLinkActive="active">
+            <i class="fas fa-folder"></i> <span>Crear Casos</span> 
+          </button>
+          <button type="button" class="btn btn-secondary" routerLink="/listview" routerLinkActive="active">
+            <i class="fas fa-file-alt"></i> <span>Reportes</span> 
+          </button>
+
+          
+      </div>
+      <div class="menu__container">
+          <button type="button" class="btn btn-secondary" routerLink="/listview" routerLinkActive="active">
+            <i class="fas fa-chart-area"></i> <span>Graficas</span> 
+          </button>
+          <button type="button" class="btn btn-secondary" routerLink="/listview" routerLinkActive="active">
+            <i class="fas fa-project-diagram"></i> <span>Relaciones</span> 
+          </button>
+          
+      </div>
+  </div>
+  <div class="workspace">
+    <div class="subnav nav-submenu">
+      {{message.submenu_stade}}
+    </div>
+      <router-outlet></router-outlet>
+  </div>  
+</div>  
+
+
+
+

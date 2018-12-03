@@ -1,0 +1,48 @@
+<div class="caseShowcase">
+
+  <div class="topBar">
+    <div class="greybackground" >
+        <a routerLink="/listview" routerLinkActive="active"><i class="fas fa-caret-left"></i></a>
+    </div>
+    
+    <div class="contenido" >
+        Nuevo Caso
+    </div>
+  </div>
+  <div class="caseBox">
+      <form #addCaseForm='ngForm' id="form-add" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputText1">Nombre del Caso</label>
+              <input type="text" class="form-control" id="inputText1" placeholder="Caso" [(ngModel)]="caseName" name="caseName">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputText2">Cliente</label>
+              <input type="text" class="form-control" id="inputText2" placeholder="Cliente" [(ngModel)]="brand" name="brand">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Textarea1">Descripción del Caso</label>
+            <textarea class="form-control" id="Textarea1" rows="3" placeholder="Descripción del Caso" [(ngModel)]="desc" name="desc"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="Textarea2">Keywords Asociadas</label>
+            <textarea class="form-control" id="Textarea2" rows="3" placeholder="Keywords Asociadas" [(ngModel)]="keywords" name="keywords"></textarea>
+          </div>
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputDate1">Fecha de Inicio</label>
+                <input type="date" class="form-control" id="inputDate1" placeholder="Inicia" [(ngModel)]="sd" name="sd">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputDate2">Fecha de Cierre</label>
+                <input type="date" class="form-control" id="inputDate2" placeholder="Termina" [(ngModel)]="fd" name="fd">
+              </div>
+            </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+      <div [innerHtml]="safeHtml"></div>
+  </div>
+
+</div>
